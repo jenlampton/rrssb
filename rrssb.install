@@ -18,12 +18,11 @@ function rrssb_uninstall() {
 function rrssb_update_1000() {
   $config = config('rrssb.settings');
 
-  $config->set('rrssb_appearance', update_variable_get('rrssb_appearance', ''));
-  $config->set('rrssb_chosen', update_variable_get('rrssb_chosen', ''));
-  $config->set('rrssb_follow', update_variable_get('rrssb_follow', ''));
-  $config->set('rrssb_image_tokens', update_variable_get('rrssb_image_tokens', ''));
-  $config->set('rrssb_prefix', update_variable_get('rrssb_prefix', ''));
-
+  $config->set('appearance', update_variable_get('rrssb_appearance', ''));
+  $config->set('chosen', update_variable_get('rrssb_chosen', ''));
+  $config->set('follow', update_variable_get('rrssb_follow', ''));
+  $config->set('image_tokens', update_variable_get('rrssb_image_tokens', ''));
+  $config->set('prefix', update_variable_get('rrssb_prefix', ''));
   $config->save();
 
   update_variable_del('rrssb_appearance');
