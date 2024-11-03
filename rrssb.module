@@ -584,6 +584,17 @@ function rrssb_settings($all = FALSE) {
  */
 function rrssb_appearance() {
   $appearance = config_get('rrssb.settings', 'appearance');
+  if (empty($appearance)) {
+    // Set default values.
+    $appearance['size'] = '';
+    $appearance['shrink'] = '';
+    $appearance['regrow'] = '';
+    $appearance['minRows'] = '';
+    $appearance['maxRows'] = '';
+    $appearance['prefixReserve'] = '';
+    $appearance['prefixHide'] = '';
+    $appearance['alignRight'] = FALSE;
+  }
   return $appearance;
 }
 
